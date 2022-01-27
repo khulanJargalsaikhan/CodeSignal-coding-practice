@@ -43,6 +43,7 @@ solution(inputArray) = ["aba", "vcd", "aba"].
 
 	//solution 2 using lambda function
 	static String[] solution2(String[] inputArray) {
+		
 		int longest = 0;
 		for (int i = 0; i < inputArray.length; i++) {
 			if (inputArray[i].length() > longest) {
