@@ -9,29 +9,30 @@ public class FirstDuplicate {
 
 	}
 
+	// solution O(n^2)
+	static int solution(int[] a) {
 
-//	static int solution(int[] a) {
-//
-//		int minIndex = a.length;
-//		int index = 0;
-//
-//		for (int i=0; i<a.length; i++){
-//			
-//			for (int j=i+1; j<a.length; j++){
-//				if (a[i] == a[j]) {
-//					index = j;
-//					if (index < minIndex)
-//						minIndex = index; 
-//				}
-//			} 
-//		}
-//
-//		if (minIndex != a.length)
-//			return a[minIndex];
-//		else    
-//			return -1;    
-//	}
+		int minIndex = a.length;
+		int index = 0;
+
+		for (int i=0; i<a.length; i++){
+			
+			for (int j=i+1; j<a.length; j++){
+				if (a[i] == a[j]) {
+					index = j;
+					if (index < minIndex)
+						minIndex = index; 
+				}
+			} 
+		}
+
+		if (minIndex != a.length)
+			return a[minIndex];
+		else    
+			return -1;    
+	}
 	
+	//solution2 O(n)
 	static int solution2(int[] a) {
 
 		Set<Integer> seen = new HashSet<>();
